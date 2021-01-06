@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 // https://yukicoder.me/problems/no/203
 public class GW203 {
@@ -14,7 +16,8 @@ public class GW203 {
     String goldenWeek = firstWeek + secondWeek;
 
     List<String> holidayList = Arrays.asList(goldenWeek.split("x"));
-    int maxHoliday = holidayList.stream().max(s -> s.length());
-    System.out.println(maxHoliday);
+
+    Optional<String> maxHoliday = holidayList.stream().max(Comparator.comparingInt(String::length));
+    System.out.println(maxHoliday.orElse("").length());
   }
 }

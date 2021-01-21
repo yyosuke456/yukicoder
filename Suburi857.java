@@ -7,9 +7,9 @@ public class Suburi857 {
     Scanner sc = new Scanner(System.in);
 
     // String １つ分を読み込む
-    int x = Integer.parseInt(sc.next());
-    int y = Integer.parseInt(sc.next());
-    int z = Integer.parseInt(sc.next());
+    long x = Long.parseLong(sc.next());
+    long y = Long.parseLong(sc.next());
+    long z = Long.parseLong(sc.next());
 
     int rest = 0;
     if (z >= x)
@@ -17,7 +17,7 @@ public class Suburi857 {
     if (z >= y)
       rest += 1;
 
-    int result = z - rest;
+    long result = z - rest;
     if (result < 0)
       result = 0;
     System.out.println(result);

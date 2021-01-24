@@ -8,10 +8,14 @@ public class Otoshidama128 {
 
     // String １つ分を読み込む
     int n = Integer.parseInt(sc.next());
-    int m = n;
-    for (int i = 9; i < n; i++) {
-
+    for (int i = 0; i < n; i++) {
+      String number = "";
+      int m = n - i;
+      for (int j = 0; j < m; j++) {
+        number += "" + n;
+      }
+      System.out.println(number);
     }
-    System.out.println(Math.floorDiv(money, children) * 1000);
+
   }
 }

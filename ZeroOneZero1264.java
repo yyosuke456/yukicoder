@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 // https://yukicoder.me/problems/no/1264
 public class ZeroOneZero1264 {
@@ -7,8 +9,14 @@ public class ZeroOneZero1264 {
     Scanner sc = new Scanner(System.in);
 
     // String １つ分を読み込む
-    String input = sc.next();
-    System.out.println(replaceAll010to101(input));
+    int numberOfZero = Integer.parseInt(sc.next()) - 1;
+    if (numberOfZero == 0) {
+      System.out.println(1);
+      return;
+    }
+    String zeros = IntStream.range(0, numberOfZero).mapToObj(i -> "0").collect(Collectors.joining(""));
+    System.out.println("010" + zeros);
+    // System.out.println(replaceAll010to101(input));
   }
 
   private static String replaceAll010to101(String input) {
@@ -17,6 +25,5 @@ public class ZeroOneZero1264 {
     } else {
       return input;
     }
-
   }
 }

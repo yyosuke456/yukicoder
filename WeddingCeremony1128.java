@@ -9,9 +9,9 @@ public class WeddingCeremony1128 {
     // String １つ分を読み込む
     int n = Integer.parseInt(sc.next());
     if (n % 2 == 0) {
-      System.out.println(n);
-    } else {
       System.out.println(n + 1);
+    } else {
+      System.out.println(n);
     }
   }
 }

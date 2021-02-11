@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,6 @@ public class Transposition1108 {
     for (int i = 0; i < n; i++) {
       soundList.add(Integer.parseInt(sc.next()));
     }
-    soundList.stream().forEach(s -> System.out.println(s + 1));
+    System.out.println(soundList.stream().map(s -> s + 1).collect(Collectors.toList()));
   }
 }

@@ -8,6 +8,7 @@ public class Continuous1256 {
 
     // String １つ分を読み込む
     int n = Integer.parseInt(sc.next());
+    n = n % 100;
     if (n % 3 == 0) {
       System.out.println("YES");
     } else {
